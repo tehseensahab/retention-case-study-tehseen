@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — $500K to $700K/Month Through Retention</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --bg: #F5F7F1;
+  --bg-panel: #EDF1E6;
+  --ink: #1D2A20;
+  --ink-soft: #4A5A4D;
+  --line: #D3DBC9;
+  --amber: #B9862F;
+  --teal: #2E6B5E;
+  --white: #FFFFFF;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap{ max-width: 860px; margin: 0 auto; padding: 0 28px; }
+
+/* HERO */
+.hero{
+  padding: 100px 0 70px;
+  border-bottom: 1px solid var(--line);
+}
+.eyebrow{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 0 0 22px;
+}
+.hero h1{
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: 1.12;
+  margin: 0 0 28px;
+  letter-spacing: -0.01em;
+}
+.hero h1 em{
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-soft);
+}
+.hero p.dek{
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: 0 0 44px;
+}
+
+.metric-band{
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+.metric{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: clamp(30px, 6vw, 46px);
+  color: var(--ink);
+}
+.metric.from{ color: var(--ink-soft); }
+.metric.to{ color: var(--amber); }
+.arrow{
+  font-size: 22px;
+  color: var(--ink-soft);
+}
+.metric-label{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+.metric-group{ display: flex; flex-direction: column; }
+
+/* SECTION SHELL */
+section{ padding: 64px 0; border-bottom: 1px solid var(--line); }
+section:last-of-type{ border-bottom: none; }
+h2.section-title{
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0 0 28px;
+  letter-spacing: -0.01em;
+}
+p{ color: var(--ink); }
+.lede{ color: var(--ink-soft); font-size: 17px; max-width: 640px; }
+
+/* THE 14-DAY RING — signature element */
+.ring-section{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 640px){
+  .ring-section{ grid-template-columns: 1fr; }
+}
+.ring-wrap{ display: flex; justify-content: center; }
+.ring-caption{
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* PILLARS */
+.pillars{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 8px;
+}
+@media (max-width: 640px){ .pillars{ grid-template-columns: 1fr; } }
+.pillar{
+  background: var(--bg-panel);
+  padding: 28px 26px;
+}
+.pillar .num{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--teal);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 10px;
+}
+.pillar h3{
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+.pillar p{
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* RESULTS GRID */
+.results-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 8px;
+}
+@media (max-width: 640px){ .results-grid{ grid-template-columns: 1fr; } }
+.result{
+  background: var(--white);
+  padding: 26px 22px;
+}
+.result .val{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--amber);
+  display: block;
+  margin-bottom: 6px;
+}
+.result .desc{
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+/* TAKEAWAY */
+.takeaway{
+  background: var(--ink);
+  color: var(--bg);
+  padding: 64px 0;
+  border-bottom: none;
+}
+.takeaway .wrap p{
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(22px, 3.4vw, 30px);
+  line-height: 1.4;
+  color: var(--bg);
+  max-width: 700px;
+  margin: 0;
+}
+.takeaway .sign{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: #A9B79B;
+  margin-top: 28px;
+  letter-spacing: 0.04em;
+}
+
+footer{
+  padding: 36px 0 60px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  letter-spacing: 0.03em;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Retention &amp; Lifecycle Marketing — Case Study</p>
+    <h1>Growing a supplement brand<br><em>fourteen days at a time.</em></h1>
+    <p class="dek">How rebuilding the post-purchase journey — education, timed touchpoints, and usage-aware replenishment — turned a subscription business's biggest leak into its biggest growth lever.</p>
+
+    <div class="metric-band">
+      <div class="metric-group">
+        <span class="metric from">$500K</span>
+        <span class="metric-label">BEFORE / MO</span>
+      </div>
+      <span class="arrow">→</span>
+      <div class="metric-group">
+        <span class="metric to">$700K</span>
+        <span class="metric-label">AFTER / MO</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">The problem</h2>
+    <p class="lede">Acquisition was working. Retention wasn't. The brand had strong front-end conversion, but too many first-time buyers churned before they ever became loyal subscribers. Post-purchase was a single "thank you" email and a generic monthly newsletter — no onboarding, no usage education, no plan for the moment doubt creeps in.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap ring-section">
+    <div>
+      <div class="ring-wrap">
+        <svg width="180" height="180" viewBox="0 0 180 180">
+          <circle cx="90" cy="90" r="72" fill="none" stroke="#D3DBC9" stroke-width="2"/>
+          <circle cx="90" cy="90" r="72" fill="none" stroke="#B9862F" stroke-width="4"
+                  stroke-dasharray="452" stroke-dashoffset="113"
+                  stroke-linecap="round" transform="rotate(-90 90 90)"/>
+          <text x="90" y="84" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="30" fill="#1D2A20">14</text>
+          <text x="90" y="106" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#4A5A4D" letter-spacing="1">DAYS</text>
+        </svg>
+      </div>
+      <p class="ring-caption">The retention window</p>
+    </div>
+    <div>
+      <h2 class="section-title" style="margin-bottom:14px;">Why the first 14 days decide everything</h2>
+      <p class="lede">More than half of subscription cancellations trace back to two things: the customer didn't use the product enough, or too much of it was still sitting around when the next order shipped. That decision is made quietly, in the first two weeks — long before a cancel button gets clicked. Discounts don't fix either problem. Habit does.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">The strategy</h2>
+    <p class="lede" style="margin-bottom: 8px;">Four moves, all aimed at the same window.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="num">01 — ONBOARDING</span>
+        <h3>Education, not just a discount</h3>
+        <p>Replaced the single welcome email with a sequence setting expectations on timing and correct usage, and reinforcing the product's "why" — not just a code to redeem.</p>
+      </div>
+      <div class="pillar">
+        <span class="num">02 — TOUCHPOINTS</span>
+        <h3>Filling the silence between orders</h3>
+        <p>Added milestone check-ins ("two weeks in — here's what to expect"), consumption nudges for low-engagement customers, and community content that made subscribers feel part of something.</p>
+      </div>
+      <div class="pillar">
+        <span class="num">03 — REPLENISHMENT</span>
+        <h3>Usage-aware, not calendar-based</h3>
+        <p>Rebuilt replenishment timing around actual consumption cycles, added flexible pause/skip in-email, and introduced "running low" nudges to prevent the panic-cancel that comes from unused product piling up.</p>
+      </div>
+      <div class="pillar">
+        <span class="num">04 — CHURN RESPONSE</span>
+        <h3>Reasons, not one generic offer</h3>
+        <p>Segmented at-risk subscribers by actual cancellation reason — low usage vs. price sensitivity vs. "not seeing results yet" — and matched each with a different save flow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">The results</h2>
+    <div class="results-grid">
+      <div class="result">
+        <span class="val">+40%</span>
+        <span class="desc">Monthly revenue growth, $500K → $700K — driven by retention, not incremental ad spend</span>
+      </div>
+      <div class="result">
+        <span class="val">↑ LTV</span>
+        <span class="desc">Longer average subscriber lifespan from usage-aware onboarding and replenishment</span>
+      </div>
+      <div class="result">
+        <span class="val">↓ Churn</span>
+        <span class="desc">Cancellations addressed at the root cause, before they reached the cancel button</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="takeaway">
+  <div class="wrap">
+    <p>"Discounts and 'cancel anytime' are table stakes. What actually keeps someone subscribed is whether the product became part of their routine in the first two weeks — and whether the brand felt like it was on their side."</p>
+    <p class="sign">— Tehseen Arbab, on what this project taught me about retention</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Tehseen Arbab · Retention &amp; Lifecycle Marketing · Klaviyo · Recharge · Skio
+  </div>
+</footer>
+
+</body>
+</html>
